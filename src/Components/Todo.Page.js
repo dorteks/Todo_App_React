@@ -121,7 +121,7 @@ function TodoPage() {
               for="note"
               className="block mb-2 pt-3 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
-              Notes:
+              Notes::
             </label>
             <textarea
               onChange={(e) => setNote(e.target.value)}
