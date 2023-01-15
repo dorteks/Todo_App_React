@@ -43,7 +43,7 @@ function TodoPage() {
         .then((res) => res.data)
         .catch((error) => error.message);
     }
-    console.log("deleted!");
+    console.log("todo deleted!");
   };
 
   // ***
