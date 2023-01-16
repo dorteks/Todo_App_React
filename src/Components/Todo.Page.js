@@ -21,8 +21,8 @@ function TodoPage() {
 
   // fetch all todos
   const { isLoading, isFetching, data, isError, error } = useTodoListsData(
-    onSuccess,
-    onError
+    onError,
+    onSuccess
   );
 
   // add todo
@@ -101,7 +101,7 @@ function TodoPage() {
       <div>
         <label
           for="Update your Todo"
-          className="block mb-2 pt-7 text-sm font-medium text-gray-900 dark:text-gray-300"
+          className="block mb-2 pt-10 text-sm font-medium text-gray-900 dark:text-gray-300"
         >
           Update your TodoList
         </label>
@@ -119,7 +119,7 @@ function TodoPage() {
 
             <label
               for="note"
-              className="block mb-2 pt-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+              className="block mb-2 pt-5 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
               Notes::
             </label>
@@ -139,7 +139,7 @@ function TodoPage() {
               onClick={() => {
                 handleAddTodo();
               }}
-              className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-2 mr-2 mb-0.9 "
+              className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-3 text-center ml-2 mr-2 mb-0.9 mt-4 "
             >
               Add Todo
             </button>
@@ -148,9 +148,9 @@ function TodoPage() {
       </div>
       {data?.data.map((todolist) => {
         return (
-          <div key={todolist.id} className="flex ">
+          <div key={todolist.id} className="flex justify-between  ">
             <ul>
-              <li className="text-black mt-3 mb-2 w-full rounded-md p-2 font-medium  hover:bg-sky-blue/[0.8] hover:text-white ">
+              <li className="text-black w-full mt-7  rounded-md p-2 font-medium  hover:bg-sky-blue/[0.8] hover:text-white hover:w-full  ">
                 <Link to={`/todolist/${todolist.id}`}>{todolist.todo}</Link>
               </li>
             </ul>

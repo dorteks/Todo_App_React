@@ -19,7 +19,7 @@ function SingleTodo() {
   return (
     <div className="p-8">
       {data.data.id}. {data.data.todo}
-      <p className="text-lg">{data.data.note}</p>
+      <p className="text-lg mt-10 font-light">{data.data.note}</p>
     </div>
   );
 }
